@@ -1,7 +1,7 @@
 ﻿using AM.ApplicationCore.domain;
 using AM.ApplicationCore.Domain;
 using AM.ApplicationCore.Services;
-
+using AM.Infrastructure;
 using System; // Ajout nécessaire pour Console et DateTime
 
 Plane plane3 = new Plane
@@ -85,4 +85,9 @@ foreach (var g in fm.DestinationGroupedFlights())
 Console.WriteLine();
 fm.FlightDetailDel(TestData.BoingPlane);
 Console.WriteLine(" average duration : " + fm.DurationAverageDel(destination));
+
+AMContext context=new AMContext();
+context.Flights.Add(TestData.flight2);
+context.SaveChanges();
+
 

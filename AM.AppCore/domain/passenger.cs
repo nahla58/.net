@@ -9,11 +9,12 @@ namespace AM.ApplicationCore.domain
     public class Passenger
     {
         public DateTime BirthDate { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string EmailAddress { get; set; }
-        public String TelNumber { get; set; }
-        public String PassportNumber { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? EmailAddress { get; set; }
+        public String? TelNumber { get; set; }
+        public String? PassportNumber { get; set; }
+        public int PassengerId { get; set; }
         public ICollection<Flight> Flights { get; set; }
 
         public virtual void PassengerType()

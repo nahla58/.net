@@ -9,7 +9,8 @@ namespace AM.ApplicationCore.domain
     public class Staff : Passenger
     {
         public float Salary { get; set; }
-        public string Function { get; set; }
+        public string? Function { get; set; }
+        
         public DateTime EmploymentDate { get; set; }
         public override void PassengerType()
         {

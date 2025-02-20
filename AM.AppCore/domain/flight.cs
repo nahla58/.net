@@ -8,14 +8,15 @@ namespace AM.ApplicationCore.domain
 {
     public class Flight
     {
-        public string Departure { get; set; }
-        public string Destination { get; set; }
+        public string? Departure { get; set; }
+        public string? Destination { get; set; }
         public DateTime EffectiveArrival { get; set; }
         public float EstimatedDuration { get; set; }  // Assurez-vous que cette ligne existe
         public DateTime FlightDate { get; set; }
         public int FlightId { get; set; }
         public Plane Plane { get; set; }
         public ICollection<Passenger> Passengers { get; set; }
+        public string AirlineLogo { get; set; }
 
 
 
@@ -24,6 +25,7 @@ namespace AM.ApplicationCore.domain
             return "Flight date: " + FlightDate + "destination" + Destination
           + "estimated duration" + EstimatedDuration;
         }
+        
 
     }
 }
